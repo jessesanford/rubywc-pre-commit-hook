@@ -4,18 +4,18 @@ from setuptools import setup
 
 setup(
     name='pre_commit_hooks',
-    description='rubocop pre commit hook.',
-    url='https://github.com/jordant/rubocop-pre-commit-hook',
+    description='reek pre commit hook.',
+    url='https://github.com/therealjessesanford/reek-pre-commit-hook',
     version='0.1',
 
-    author='Jordan Tardif',
-    author_email='jordan.tardif@gmail.com',
+    author='Jesse Sanford',
+    author_email='jessesanford@gmail.com',
 
     packages=find_packages('.', exclude=('tests*', 'testing*')),
 
     entry_points={
         'console_scripts': [
-            'check-rubocop = pre_commit_hooks.check_rubocop:check_rubocop',
+            'check-reek = pre_commit_hooks.check_reek:check_reek',
         ],
     },
 )
