@@ -1,9 +1,9 @@
 # reek-pre-commit-hook
 
-Reek ( https://github.com/troessner/reek ) pre-commit hooks for pre-commit: ( https://github.com/pre-commit/pre-commit ) borrowed almost entirely from: rubocop-pre-commit-hook ( https://github.com/jordant/rubocop-pre-commit-hook )
+Ruby -wc ( https://www.launchacademy.com/codecabulary/learn-ruby/command-line-switches ) pre-commit hooks for pre-commit: ( https://github.com/pre-commit/pre-commit ) borrowed almost entirely from: rubocop-pre-commit-hook ( https://github.com/jordant/rubocop-pre-commit-hook )
 ```
--   repo: https://github.com/therealjessesanford/reek-pre-commit-hook.git
-    sha: '0697c30fd0c63203d1f0a3969ddf4ada8427cd83' # use latest commit id or run pre-commit autoupdate before pre-commit install
+-   repo: git@github.com:therealjessesanford/rubywc-pre-commit-hook.git
+    sha: '68381b2db41db5221d04881d8054b8f7da55c8e7' # use latest commit id or run pre-commit autoupdate before pre-commit install
     hooks:
-    -   id: check-reek
+    -   id: check-rubywc
 ```

@@ -1,6 +1,6 @@
--   id: check-reek
-    name: Check Reek
-    description: This hook checks ruby files for code smell
-    entry: check-reek
+-   id: check-rubywc
+    name: Check ruby -wc
+    description: This hook checks ruby source for syntax errors and warnings
+    entry: check-rubywc
     language: python
     files: \.rb$

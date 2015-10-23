@@ -5,19 +5,19 @@ import subprocess
 import sys
 
 
-def check_reek(argv=None):
+def check_rubywc(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('filenames', nargs='*', help='filenames to check.')
     args = parser.parse_args(argv)
 
     retval = 0
 
-    command = ["reek"] + args.filenames
+    command = ["ruby", "-wc"] + args.filenames
 
     try:
         retval = subprocess.check_call(command, shell=False)
     except subprocess.CalledProcessError as err:
-        print('{0}: reek failed ({1})'.format(args.filenames, err))
+        print('{0}: ruby -wc failed ({1})'.format(args.filenames, err))
         retval = 1
 
     return retval
