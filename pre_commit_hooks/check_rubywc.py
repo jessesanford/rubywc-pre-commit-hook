@@ -16,7 +16,7 @@ def check_rubywc(argv=None):
         command = ["ruby", "-wc", source_file]
 
         try:
-            retval = subprocess.check_call(command, shell=False)
+            subprocess.check_call(command, shell=False)
         except subprocess.CalledProcessError as err:
             print('{0}: ruby -wc failed ({1})'.format(source_file, err))
             retval = 1
