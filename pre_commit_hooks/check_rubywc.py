@@ -12,16 +12,17 @@ def check_rubywc(argv=None):
 
     retval = 0
 
-    command = ["ruby", "-wc"] + args.filenames
+    for source_file in args.filenames:
+        command = ["ruby", "-wc", source_file]
 
-    try:
-        retval = subprocess.check_call(command, shell=False)
-    except subprocess.CalledProcessError as err:
-        print('{0}: ruby -wc failed ({1})'.format(args.filenames, err))
-        retval = 1
+        try:
+            retval = subprocess.check_call(command, shell=False)
+        except subprocess.CalledProcessError as err:
+            print('{0}: ruby -wc failed ({1})'.format(source_file, err))
+            retval = 1
 
     return retval
 
 
 if __name__ == '__main__':
-    sys.exit(check_reek())
+    sys.exit(check_rubywc())
